@@ -1,0 +1,30 @@
+Program for Think Python problem 2.3
+
+
+cover_price = 24.95
+disc_amt = .40                    
+copies = 60
+total_cost = 0
+first_ship = 3.00
+rest_ship = 0.75
+bookstore_price = 0
+books_price = 0
+
+
+bookstore_price = cover_price - (cover_price * disc_amt) #price per book with discount 
+
+books_total = bookstore_price * copies    #with discount
+
+books_total_nd = cover_price * copies #without discount
+
+shipping = ((copies - 1) * rest_ship) + first_ship
+
+total_cost = books_total + shipping
+
+print(cover_price, "cover price")
+
+print(bookstore_price * copies, "price for books with discount")
+
+print(cover_price * copies, "price for books without discount")
+
+print(total_cost)
